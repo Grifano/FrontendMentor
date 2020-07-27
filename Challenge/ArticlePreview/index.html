@@ -76,16 +76,16 @@
       Coded by <a href="#">Your Name Here</a>.
     </div>
   </footer>
+  <script>
+    var iconShare = document.querySelector(".share__icon");
+    var shareList = document.querySelector(".share__list");
+    if (iconShare) {
+      iconShare.addEventListener("click", function () {
+        iconShare.classList.toggle("open");
+        shareList.classList.toggle("open");
+      });
+    }
+  </script>
 </body>
-<script>
-  var iconShare = document.querySelector(".share__icon");
-  var shareList = document.querySelector(".share__list");
-  if (iconShare) {
-    iconShare.addEventListener("click", function () {
-      iconShare.classList.toggle("open");
-      shareList.classList.toggle("open");
-    });
-  }
-</script>
 
 </html>
