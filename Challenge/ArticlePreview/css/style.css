@@ -35,9 +35,9 @@ body {
   height: 100%;
   width: 100%;
   font-size: 100%;
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   line-height: 1;
-  font-size: 14px;
+  font-size: 13px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -90,10 +90,6 @@ h6 {
 }
 
 /*--------------------*/
-body {
-  font-size: 13px;
-  padding: 40px;
-}
 .attribution {
   padding: 10px;
   font-size: 11px;
@@ -108,9 +104,7 @@ body {
   padding: 218px 40px 218px;
   background-color: #edf2f8;
 }
-
 .article {
-  overflow: hidden;
   margin: 0 auto;
   max-width: 730px;
   display: flex;
@@ -119,7 +113,9 @@ body {
   flex: 1 1 auto;
 }
 .article__image {
-  padding: 0px 283px 280px 0px;
+  min-width: 284px;
+  min-height: 280px;
+  padding: 0px 0px 280px 0px;
   position: relative;
 }
 .article__image img {
@@ -133,20 +129,20 @@ body {
 }
 .article__body {
   flex: 1 1 auto;
-  padding: 32px 40px;
+  padding: 34px 38px 33px 34px;
   background-color: #fff;
 }
 .article__title {
   color: hsl(217, 19%, 35%);
   font-weight: 700;
-  font-size: 24px;
+  font-size: 21px;
   line-height: 28px;
   margin: 0px 0px 12px 0px;
 }
 .article__text {
   color: hsl(214, 17%, 51%);
   margin: 0px 0px 20px 0px;
-  font-size: 15px;
+  font-size: 13px;
   line-height: 20px;
 }
 .article__text p {
@@ -159,8 +155,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.article__user {
 }
 .user {
   display: flex;
@@ -181,15 +175,13 @@ body {
 .user__name {
   color: hsl(217, 19%, 35%);
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 20px;
 }
 .user__date {
   color: hsl(212, 23%, 69%);
-  font-size: 12px;
-  line-height: 15px;
-}
-.article__share {
+  font-size: 14px;
+  line-height: 17px;
 }
 .share {
   position: relative;
@@ -272,18 +264,21 @@ body {
   }
 }
 @media (max-width: 991px) {
-  body {
-    padding: 0;
-  }
   .wrapper {
-    padding: 40px 25px;
+    padding: 40px 125px;
   }
   .article {
     flex-direction: column;
     border-radius: 10px;
   }
 }
-@media (max-width: 475px) {
+@media (max-width: 675px) {
+  .wrapper {
+    padding: 40px 25px;
+  }
+  .article {
+    overflow: hidden;
+  }
   .article__body {
     padding: 42px 35px 12px;
     position: relative;
@@ -329,5 +324,13 @@ body {
   }
   .share__list li:last-child {
     margin: 0px;
+  }
+}
+@media (max-width: 320px) {
+  .share__lable {
+    font-size: 0;
+  }
+  .article__body {
+    padding: 13px 10px;
   }
 }
